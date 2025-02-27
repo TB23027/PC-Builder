@@ -45,8 +45,9 @@ while True:
     # or if the user doesn't copy the exact component when they want
     # to remove it.
     except ValueError:
-        print("Make sure the spelling is correct or make sure it is an integer: ")
+        print("Make sure the spelling is correct.")
+        print("or make sure it is an integer:")
 # These will be printed once the while loop has been broken
-# after the user enters the no. 4.
+# after the user enters the no. 4. 
 print(f"Final Computer Build {pc_parts}")
 print("Goodbye")
