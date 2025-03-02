@@ -1,6 +1,10 @@
 # This list has nothing inside as the user will enter what they want
 # to add to this build during the while loop.
 pc_parts = []
+option1 = 1
+option2 = 2
+option3 = 3
+option4 = 4
 # Putting these print statements outside of the while loop means they 
 # will only be asked once at the start and not every single repeat.
 print("Options:")
@@ -18,24 +22,24 @@ while True:
         option = int(input("Choose an option: "))
         # If the user enters no. 1, they will
         # be able to add a component to their custom pc build.
-        if option == 1:
+        if option == option1:
             component = input("Enter a component you wish to add: ")
             pc_parts.append(component)
             print(f"{component} added to build.")
         # If the user enters no. 2, they will
-        # be able to remove a component from the custom pc build list.
+        # be able to remov a component from the custom pc build list.
         # They must enter the exact copy of whatever they previously
         # entered as the part otherwise they will have to redo it.
-        elif option == 2:
+        elif option == option2:
             remcomponent = input("Enter the component you wish to remove: ")
             pc_parts.remove(remcomponent)
             print(f"{remcomponent} removed from build.")
         # If the user enters no. 3, the list will be printed.
-        elif option == 3:
+        elif option == option3:
             print(pc_parts)
         # If the user enters no. 4, the while loop breaks and anything 
         # after the while loop will begin.
-        elif option == 4:
+        elif option == option4:
             break
         # If the user enters a number above or below 1-4,
         # they will be prompted to enter a number between 1-4.
