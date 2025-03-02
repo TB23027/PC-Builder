@@ -33,8 +33,11 @@ while True:
         # entered as the part otherwise they will have to redo it.
         elif option == option2:
             remcomponent = input("Enter the component you wish to remove: ")
-            pc_parts.remove(remcomponent)
-            print(f"{remcomponent} removed from build.")
+            try:
+                pc_parts.remove(remcomponent)
+                print(f"{remcomponent} removed from build.")
+            except ValueError:
+                print(f"{remcomponent} Not found in build list.")
         # If the user enters no. 3, the list will be printed.
         elif option == option3:
             print(pc_parts)
@@ -50,8 +53,7 @@ while True:
     # or if the user doesn't copy the exact component when they want
     # to remove it.
     except ValueError:
-        print("Make sure the spelling is correct.")
-        print("or make sure it is an integer:")
+        print("Make sure it is an integer:")
 # These will be printed once the while loop has been broken
 # after the user enters the no. 4. 
 print(f"Final Computer Build {pc_parts}")
