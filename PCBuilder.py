@@ -1,6 +1,7 @@
 # This list has nothing inside as the user will enter what they want
 # to add to this build during the while loop.
 pc_parts = []
+# These are replacing the number input when they are given a choice.
 option1 = 1
 option2 = 2
 option3 = 3
