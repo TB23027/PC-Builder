@@ -30,12 +30,15 @@ while True:
         # If the user enters no. 2, they will
         # be able to remov a component from the custom pc build list.
         # They must enter the exact copy of whatever they previously
-        # entered as the part otherwise they will have to redo it.
+        # entered as the part ot  bvherwise they will have to redo it.
         elif option == option2:
             remcomponent = input("Enter the component you wish to remove: ")
             try:
                 pc_parts.remove(remcomponent)
                 print(f"{remcomponent} removed from build.")
+            # If the user does not enter a component that is on the list
+            # including if it is mispelt, they will be told that 
+            # this component has not been found in the list.
             except ValueError:
                 print(f"{remcomponent} Not found in build list.")
         # If the user enters no. 3, the list will be printed.
@@ -49,9 +52,8 @@ while True:
         # they will be prompted to enter a number between 1-4.
         else:
             print("1-4 please!")
-    # If the user enters a letter not a number, 
-    # or if the user doesn't copy the exact component when they want
-    # to remove it.
+    # If the user enters a letter not a number, they will be told
+    # to enter a valid integer.
     except ValueError:
         print("Make sure it is an integer:")
 # These will be printed once the while loop has been broken
